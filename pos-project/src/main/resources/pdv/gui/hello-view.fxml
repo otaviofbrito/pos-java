@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pdv.gui.pdvGUIController">
+   <children>
+      <AnchorPane fx:id="headerPane" prefHeight="101.0" prefWidth="633.0" style="-fx-background-color: #5dc9c0;">
+         <children>
+            <Label layoutX="227.0" layoutY="14.0" text="Supermercado" textFill="#fc7272">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <HBox layoutX="129.0" layoutY="51.0" prefHeight="38.0" prefWidth="378.0" spacing="10.0">
+               <children>
+                  <Label text="Registradora" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <ComboBox fx:id="regComboBox" prefHeight="24.0" prefWidth="95.0" />
+                  <Button fx:id="newSaleButton" mnemonicParsing="false" prefHeight="24.0" prefWidth="153.0" text="Iniciar nova venda" />
+               </children>
+            </HBox>
+         </children>
+         <effect>
+            <BoxBlur height="36.43" iterations="0" width="103.21" />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="salePane" prefHeight="189.0" prefWidth="633.0" style="-fx-background-color: #cdd0d1;">
+         <children>
+            <Label layoutX="32.0" layoutY="14.0" prefHeight="16.0" prefWidth="166.0" text="Adicionar produto:" />
+            <ComboBox fx:id="itemsComboBox" layoutX="31.0" layoutY="38.0" prefHeight="24.0" prefWidth="75.0" />
+            <Button fx:id="itemAddButton" layoutX="266.0" layoutY="38.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="95.0" text="Adicionar" />
+            <Button fx:id="endSaleButton" layoutX="488.0" layoutY="146.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="131.0" text="Finalizar venda" />
+            <Spinner fx:id="qtdSpinner" layoutX="117.0" layoutY="38.0" prefHeight="24.0" prefWidth="86.0" />
+            <Label fx:id="subtotalLabel" layoutX="32.0" layoutY="146.0" prefHeight="26.0" prefWidth="274.0" text="subtotal:" textFill="#6f5fe4">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="selectProduct" layoutX="31.0" layoutY="87.0" prefHeight="26.0" prefWidth="343.0" style="-fx-border-radius: 3; -fx-border-color: #0b23f8;" textFill="#6274fc">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="qtdProdutosLabel" layoutX="405.0" layoutY="38.0" text="qtd produtos: " />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paymentPane" prefHeight="190.0" prefWidth="635.0">
+         <children>
+            <Label layoutX="22.0" layoutY="44.0" text="Pagamento" />
+            <ComboBox fx:id="paymentComboBox" layoutX="106.0" layoutY="40.0" prefHeight="24.0" prefWidth="147.0" />
+            <Button fx:id="payButton" layoutX="477.0" layoutY="139.0" mnemonicParsing="false" text="Efetuar pagamento" textFill="#057505" />
+            <Spinner fx:id="qtdParcelas" layoutX="272.0" layoutY="40.0" prefHeight="24.0" prefWidth="69.0" />
+            <ComboBox fx:id="issuerComboBox" layoutX="107.0" layoutY="71.0" prefHeight="24.0" prefWidth="144.0" />
+            <TextField fx:id="instTextField" layoutX="108.0" layoutY="71.0" prefHeight="24.0" prefWidth="144.0" />
+            <Label fx:id="instLabel" layoutX="22.0" layoutY="75.0" prefHeight="16.0" prefWidth="69.0" text="Instituiçao" />
+            <Label fx:id="issuerLabel" layoutX="20.0" layoutY="75.0" prefHeight="16.0" prefWidth="74.0" text="Operadora" />
+            <Label fx:id="changeLabel" layoutX="22.0" layoutY="106.0" prefHeight="18.0" prefWidth="232.0" text="Troco: R$ 0,00">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="parcLabel" layoutX="262.0" layoutY="23.0" text="Parcelamento" />
+            <Label fx:id="totalLabel" layoutX="375.0" layoutY="39.0" prefHeight="26.0" prefWidth="249.0" text="Total: R$ 0,00" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="qtdFornecidaTextField" layoutX="106.0" layoutY="71.0" prefHeight="24.0" prefWidth="147.0" />
+            <Label fx:id="quantiaLabel" layoutX="20.0" layoutY="75.0" text="Quantia" />
+            <Button fx:id="confirmValueButton" layoutX="265.0" layoutY="71.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="84.0" text="Confirma" />
+         </children>
+      </AnchorPane>
+   </children>
+</FlowPane>
